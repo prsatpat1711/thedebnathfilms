@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 const VideoBG = () => {
   return (
     <div className="video-container">
-      <video autoPlay muted loop id="bg-video" style={{ height: "150vh"}}>
+      <video autoPlay muted controls={false} loop id="bg-video" style={{ height: "150vh"}}>
         <source src="./video1.mp4" type="video/mp4" />
       </video>
       <div className="border border-0">
