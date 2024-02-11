@@ -1,6 +1,4 @@
-import React from "react";
 import "./VideoBG.css";
-import { Typography } from "@mui/material";
 import { ArrowDownwardSharp } from "@mui/icons-material";
 import Navbar from "../Navbar/Navbar";
 

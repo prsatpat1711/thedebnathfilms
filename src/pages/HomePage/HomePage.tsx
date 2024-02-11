@@ -1,8 +1,6 @@
-import React from "react";
 import VideoBG from "../../components/VideoBG/VideoBG";
 import "./HomePage.css";
 import { Typography } from "@mui/material";
-import Navbar from "../../components/Navbar/Navbar";
 import ImageGrid from "../../components/ImageGrid/ImageGrid";
 
 const HomePage = () => {
