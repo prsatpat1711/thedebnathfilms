@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className="homepage-div">
       <VideoBG />
-      <div className="bg-black" style={{ height: "auto" }}>
+      <div className="bg-danger" style={{ height: "auto" }}>
         <Typography
           variant="h3"
           align="center"

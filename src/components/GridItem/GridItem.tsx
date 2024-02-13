@@ -1,22 +1,42 @@
 // GridItem.tsx
-import React from 'react'
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
-interface GridItemProps{
-    src: string;
+interface GridItemProps {
+  image: imageData;
 }
 
-const GridItem: React.FC<GridItemProps> = ({ src }) => {
+interface imageData {
+  name: string;
+  src: string;
+  description: string;
+}
+
+const GridItem: React.FC<GridItemProps> = ({ image }) => {
   return (
-    <div className='w-100 h-100 m-2'>
-      <img
-        src={"./" + src + ".jpg"}
-        alt={src}
-        loading="lazy"
-        style={{ width: "100%", height: "auto", maxHeight: "280px" }}
-        className="border border-dark rounded mt-2"
-      />
-    </div>
+    <Card sx={{ width: 340 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="200"
+          image={`./${image.src}.jpg`}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {image.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {image.description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
-}
+};
 
 export default GridItem;

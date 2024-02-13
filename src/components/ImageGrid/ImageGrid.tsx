@@ -1,18 +1,16 @@
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import GridItem from "../GridItem/GridItem";
+import data from './Images.json'
+
+interface imageData {
+  name: string;
+  src: string;
+  description: string;
+}
 
 export default function ImageGrid() {
-  const images = [
-    "Img1",
-    "Img2",
-    "Img3",
-    "Img4",
-    "Img5",
-    "Img6",
-    "Img7",
-    "Img8",
-  ];
+  const images: imageData[] = data;
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -28,10 +26,10 @@ export default function ImageGrid() {
               xs={12} // Full width on small screens
               sm={6}  // Half width on medium screens
               md={3}  // Quarter width on large screens
-              key={image}
+              key={image.src}
               className="align-items-center justify-content-center d-flex"
             >
-              <GridItem src={image} />
+              <GridItem image={image} />
             </Grid>
           ))}
       </Grid>

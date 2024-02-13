@@ -1,0 +1,42 @@
+[
+    {
+        "name":"January 2023",
+        "src":"Img1",
+        "description":"Amazing collection of pics at the xyz location."
+    },
+    {
+        "name":"Pic name",
+        "src":"Img2",
+        "description":"Amazing collection of pics at the xyz location."
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img3",
+        "description":"Generic description to make it look good"
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img4",
+        "description":"Generic description to make it look good"
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img5",
+        "description":"Generic description to make it look good"
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img6",
+        "description":"Generic description to make it look good"
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img7",
+        "description":"Generic description to make it look good"
+    },
+    {
+        "name":"Pics of 2023",
+        "src":"Img8",
+        "description":"Generic description to make it look good"
+    }
+]
