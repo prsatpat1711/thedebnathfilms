@@ -24,6 +24,7 @@ const VideoBG = () => {
     <div className="video-container">
       <video
         ref={videoPlayer}
+        autoPlay
         controls={false}
         loop
         id="bg-video"
