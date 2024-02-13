@@ -13,6 +13,8 @@ const HomePage = () => {
           align="center"
           className="text-white pt-2"
           gutterBottom
+          fontFamily={'AlexBrush'}
+          fontSize={80}
         >
           Checkout our images
         </Typography>
@@ -22,6 +24,7 @@ const HomePage = () => {
           align="center"
           className="text-white pt-4"
           gutterBottom
+          fontFamily={'OldStandard'}
         >
           We are wanderers, explorers of light, driven by a strong desire to
           capture fleeting moments onto frames and stitching them together to

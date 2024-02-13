@@ -5,5 +5,18 @@
 
 body{
   height: 100%;
+  font-family: 'AlexBrush, cursive' !important;
   width: 100%;
+}
+
+
+@font-face {
+  font-family: 'AlexBrush';
+  src: url('./fonts/AlexBrush-Regular.ttf') format('truetype');
+  /* Add other font properties here, if needed */
+}
+@font-face {
+  font-family: 'OldStandard';
+  src: url('./fonts/OldStandardTT-Regular.ttf') format('truetype');
+  /* Add other font properties here, if needed */
 }

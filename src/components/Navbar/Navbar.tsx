@@ -6,16 +6,40 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
+import { IconButton } from '@mui/material';
 
 const pages = ['About the studio', 'Photos', 'Contact'];
 
 interface NavbarProps {
   showBg: boolean;
+  play: number;
+  setPlay: (value: number) =>  void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ showBg }) => {
-
+const Navbar: React.FC<NavbarProps> = ({ showBg, play, setPlay }) => {
   const isSmallScreen = useMediaQuery('(max-width:600px)');
+
+  const handlePlay = () => {
+    setPlay(0.2);
+  }
+
+  const handlePause = () => {
+    setPlay(0);
+  }
+
+  const setPlayButtons = (play: number) => {
+    if(play === 0.2){
+      return <IconButton onClick={handlePause} sx={{ color: 'white'}} disableFocusRipple disableTouchRipple disableRipple>
+        <PauseIcon />
+      </IconButton>
+    }else{
+      return <IconButton onClick={handlePlay} sx={{ color: 'white'}} disableFocusRipple disableTouchRipple disableRipple>
+        <PlayArrowIcon />
+      </IconButton>
+    }
+  }
 
   const setBg = () => {
     let name: string = "border border-0 shadow-none ";
@@ -40,8 +64,9 @@ const Navbar: React.FC<NavbarProps> = ({ showBg }) => {
             sx={{
               mr: isSmallScreen ? 0 : 2,
               display: { xs: 'flex', md: 'flex' },
-              fontFamily: 'sans-serif',
+              fontFamily: 'AlexBrush',
               fontWeight: 700,
+              fontSize: 30,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
@@ -50,6 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ showBg }) => {
             The Debnath Films
           </Typography>
           <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
+            {setPlayButtons(play)}
             {isSmallScreen ? (
               <Button
                 sx={{ my: 1, color: 'white', display: 'block' }}
@@ -63,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ showBg }) => {
                 <Button
                   key={page}
                   onClick={() => console.log("Clicked")}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'sans-serif', fontWeight: 700, letterSpacing: "0.3rem" }}
                   className='ms-3'
                 >
                   {page}

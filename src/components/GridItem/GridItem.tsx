@@ -7,8 +7,16 @@ interface GridItemProps{
 
 const GridItem: React.FC<GridItemProps> = ({ src }) => {
   return (
-    <img src={"./" + src + ".jpg"} alt={src} loading='lazy' style={{ width: '100%', height: 'auto', maxHeight: '280px' }} className='border border-dark rounded mt-2'/>
-  )
+    <div className='w-100 h-100 m-2'>
+      <img
+        src={"./" + src + ".jpg"}
+        alt={src}
+        loading="lazy"
+        style={{ width: "100%", height: "auto", maxHeight: "280px" }}
+        className="border border-dark rounded mt-2"
+      />
+    </div>
+  );
 }
 
 export default GridItem;
